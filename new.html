@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boomplay - Playlist</title>
+     <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon"><img src="./BOOMPLAY LOGO.jpeg" alt="logo-icon"></div>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search Artists, Songs, Albums, Videos" class="search-input">
+            </div>
+            <div class="header-actions">
+                <div class="coins-btn">
+                    <span class="coins-icon"><img src="./coins.jpeg" alt="coins-icon"></span>
+                </div>
+                <button class="artists-btn"><b>Boomplay for artists</b></button>
+                <button class="download-btn">Download</button>
+            </div>
+        </header>
+    <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="profile-section" onclick="openAuthModal()">
+                    <div class="profile-avatar"><img src="./log in.jpeg" alt="profile-avatar"></div>
+                    <span class="profile-text"><b>Log in / Sign up</b></span>
+                </div>
+                <nav class="navigation">
+    <div class="nav-section">
+        <h3 class="nav-title"><b>Music</b></h3>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="home.html" class="nav-link">
+                    <span class="nav-icon"><img src="./home.jpeg" alt=""></span>
+                    <span><b>Home</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="artists.html" class="nav-link">
+                    <span class="nav-icon"><img src="./art.jpeg" alt=""></span>
+                    <span><b>Artists</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="trending.html" class="nav-link">
+                    <span class="nav-icon"><img src="./trend.jpeg" alt=""></span>
+                    <span><b>Trending</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="new.html" class="nav-link">
+                    <span class="nav-icon"><img src="./new.jpeg" alt=""></span>
+                    <span><b>New</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="videos.html" class="nav-link">
+                    <span class="nav-icon"><img src="./videos.jpeg" alt=""></span>
+                    <span><b>Videos</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- <a href="playlists.html" class="nav-link"> -->
+                    <span class="nav-icon"><img src="./play.jpeg" alt=""></span>
+                    <span><b>Playlists</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- <a href="charts.html" class="nav-link"> -->
+                    <span class="nav-icon"><img src="./charts.jpeg" alt=""></span>
+                    <span><b>Charts</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- <a href="genres.html" class="nav-link"> -->
+                    <span class="nav-icon"><img src="./genres.jpeg" alt=""></span>
+                    <span><b>Genres</b></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+                    <div class="nav-section">
+                        <h3 class="nav-title"><b>Library</b></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <span class="nav-icon"><img src="./addAPlaylist.jpeg" alt=""></span>
+                                <span><b>Add Playlist</b></span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-icon"><img src="./favourites.jpeg" alt=""></span>
+                                <span><b>Favourites</b></span>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-icon"><img src="./myPlaylist.jpeg" alt=""></span>
+                                <span><b>My Playlist</b></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3 class="nav-title"><b>BUSS</b></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <span class="nav-icon"><img src="./nav_recommended.jpeg" alt=""></span>
+                                <span><b>Recommended</b></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-section">
+                        <h3 class="nav-title"><b>Podcast</b></h3>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <span class="nav-icon"><img src="./nav_recommended.jpeg" alt=""></span>
+                                <span><b>Recommended</b></span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <div class="playlist-header">
+                    <div class="playlist-table-header">
+                        <div class="col-number">#</div>
+                        <div class="col-title">Title</div>
+                        <div class="col-artist">Artist</div>
+                        <div class="col-time">Time</div>
+                    </div>
+                </div>
+
+                <div class="playlist-tracks">
+                    <!-- Track 1 -->
+                    <div class="track-row playing">
+                        <div class="col-number">
+                            <button class="play-icon">▶</button>
+                        </div>
+                        <div class="col-title">
+                            <img src="./rema.webp" alt="FUN" class="track-image">
+                            <span class="track-name">FUN</span>
+                        </div>
+                        <div class="col-artist">Rema</div>
+                        <div class="col-actions">
+                           <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                            </div>
+                        <div class="col-time">03:09</div>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div class="track-row">
+                        <div class="col-number">2</div>
+                        <div class="col-title">
+                            <img src="./imgi_2_d475c4a2cc3e4971ab66b5341c8257fbH800W800_80_80.jpeg" alt="Loader" class="track-image">
+                            <span class="track-name">Loader</span>
+                        </div>
+                        <div class="col-artist">AthenaDME</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">02:09</div>
+                    </div>
+
+                    <!-- Track 3 -->
+                    <div class="track-row">
+                        <div class="col-number">3</div>
+                        <div class="col-title">
+                            <img src="imgi_2_d475c4a2cc3e4971ab66b5341c8257fbH800W800_80_80.jpeg" alt="One Call" class="track-image">
+                            <span class="track-name">One Call ft. FlagBoi</span>
+                        </div>
+                        <div class="col-artist">AthenaDME</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">02:28</div>
+                    </div>
+
+                    <!-- Track 4 -->
+                    <div class="track-row">
+                        <div class="col-number">4</div>
+                        <div class="col-title">
+                            <img src="./imgi_3_ced236cb84be479090e7ad00fa592918H800W800_80_80.jpeg" alt="Suger" class="track-image">
+                            <span class="track-name">Suger</span>
+                        </div>
+                        <div class="col-artist">T Peller</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">02:05</div>
+                    </div>
+
+                    <!-- Track 5 -->
+                    <div class="track-row">
+                        <div class="col-number">5</div>
+                        <div class="col-title">
+                            <img src="./imgi_4_098fc0db6dd84cb8a108f87f8d1216eeH1500W1500_80_80.jpeg" alt="Shekere" class="track-image">
+                            <span class="track-name">Shekere ft. Terri & Minz</span>
+                        </div>
+                        <div class="col-artist">Mr. Dutch</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:42</div>
+                    </div>
+
+                    <!-- Track 6 -->
+                    <div class="track-row">
+                        <div class="col-number">6</div>
+                        <div class="col-title">
+                            <img src="./jug.jpeg" alt="Jugular" class="track-image">
+                            <span class="track-name">Jugular Jugular</span>
+                        </div>
+                        <div class="col-artist">Lawrence Oyor</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">04:36</div>
+                    </div>
+
+                    <!-- Track 7 -->
+                    <div class="track-row">
+                        <div class="col-number">7</div>
+                        <div class="col-title">
+                            <img src="imgi_6_5bd88fe8d59a43b8964c4faf87f35e38H3000W3000_80_80.jpeg" alt="Not For Me" class="track-image">
+                            <span class="track-name">Not For Me ft. Peruzzi</span>
+                        </div>
+                        <div class="col-artist">Koko Pee</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:01</div>
+                    </div>
+
+                    <!-- Track 8 -->
+                    <div class="track-row">
+                        <div class="col-number">8</div>
+                        <div class="col-title">
+                            <img src="./ind.jpeg" alt="Industry" class="track-image">
+                            <span class="track-name">INDUSTRY MACHINE</span>
+                        </div>
+                        <div class="col-artist">ODUMODUBLVCK</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:04</div>
+                    </div>
+
+                    <!-- Track 9 -->
+                    <div class="track-row">
+                        <div class="col-number">9</div>
+                        <div class="col-title">
+                            <img src="./doing.jpeg" alt="DOINGS" class="track-image">
+                            <span class="track-name">DOINGS ft. Jeriq</span>
+                        </div>
+                        <div class="col-artist">C-UNIT</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:27</div>
+                    </div>
+
+                    <!-- Track 10 -->
+                    <div class="track-row">
+                        <div class="col-number">10</div>
+                        <div class="col-title">
+                            <img src="./imgi_10_239af6ee13c8467a95bb056a9ccae649H3000W3000_80_80.jpeg" alt="Slow Surrender" class="track-image">
+                            <span class="track-name">Slow Surrender ft. Drex D</span>
+                        </div>
+                        <div class="col-artist">Nari kiz</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:16</div>
+                    </div>
+
+                    <!-- Track 11 -->
+                    <div class="track-row">
+                        <div class="col-number">11</div>
+                        <div class="col-title">
+                            <img src="./imgi_10_239af6ee13c8467a95bb056a9ccae649H3000W3000_80_80.jpeg" alt="Seductive Flow" class="track-image">
+                            <span class="track-name">Seductive Flow</span>
+                        </div>
+                        <div class="col-artist">Nari kiz</div>
+                        <div class="col-actions">
+                            <button class="action-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+                            <button class="action-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+                            <button class="action-btn">⋮</button>
+                        </div>
+                        <div class="col-time">03:17</div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-container">
+                        <div class="footer-content">
+                            <div class="footer-columns">
+                                <div class="footer-column">
+                                    <h3>Explore</h3>
+                                    <ul>
+                                        <li><a href="#">Artists</a></li>
+                                        <li><a href="#">Trending Songs</a></li>
+                                        <li><a href="#">New Songs</a></li>
+                                        <li><a href="#">Charts</a></li>
+                                        <li><a href="#">Videos</a></li>
+                                        <li><a href="#">Podcast</a></li>
+                                        <li><a href="#">Buzz</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="footer-column">
+                                    <h3>For Users</h3>
+                                    <ul>
+                                        <li><a href="#">Download</a></li>
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="#">Go Premium</a></li>
+                                        <li><a href="#">Wordpress</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="footer-column">
+                                    <h3>For Artists and Vendors</h3>
+                                    <ul>
+                                        <li><a href="#">Boomplay for Artists</a></li>
+                                        <li><a href="#">Get Verified</a></li>
+                                        <li><a href="#">Artists FAQ</a></li>
+                                        <li><a href="#">Artists Distributors</a></li>
+                                        <li><a href="#">Vendors Login</a></li>
+                                        <li><a href="#">Report Content Issue</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="footer-column">
+                                    <h3>Company</h3>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Advertising</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Visual Identity</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                             
+                                <div class="footer-apps-social">
+                                    <div class="app-downloads">
+                                        <a href="#" class="app-button google-play">
+                                            <img src="./GOGGLE.jpeg" alt="Google Play" class="app-icon">
+                                            <div class="app-text">
+                                                <span class="get-it">GET IT ON</span>
+                                                <span class="store-name">Google Play</span>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="#" class="app-button app-store">
+                                            <img src="./APPLE.jpeg" alt="Apple" class="app-icon">
+                                            <div class="app-text">
+                                                <span class="get-it">Download on the</span>
+                                                <span class="store-name">App Store</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                                <div class="social-icons">
+                                    <a href="#" class="social-icon">
+                                        <img src="./N2 (4).jpeg" alt="Facebook">
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <img src="./imgi_436_icon-twitter-ZCTVN2FM.jpeg" alt="Twitter">
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <img src="./imgi_437_icon-ins-IISRFBH7.jpeg" alt="Instagram">
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <img src="./imgi_438_icon-youtube-KCJTPPKS.jpeg" alt="YouTube">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-bottom">
+                            <div class="footer-bottom-left">
+                                <span>© 2023 Boomplay All rights reserved.</span>
+                            </div>
+                            <div class="footer-bottom-links">
+                                <a href="#">Privacy Policy</a>
+                                <span class="separator">|</span>
+                                <a href="#">EULA</a>
+                                <span class="separator">|</span>
+                                <a href="#">Podcast T&C</a>
+                                <span class="separator">|</span>
+                                <a href="#">Sitemap</a>
+                            </div>
+                            <div class="back-to-top">
+                                <button class="back-to-top-btn" onclick="document.querySelector('.content').scrollTo({top: 0, behavior: 'smooth'})">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <button class="close-modal" onclick="closeAuthModal()">×</button>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchTab('login')">Log in</button>
+                <button class="auth-tab" onclick="switchTab('signup')">Sign up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="auth-form active" id="loginForm">
+                <div class="auth-type-selector">
+                    <div class="auth-type-option" onclick="switchLoginType('phone')">
+                        <div class="auth-type-radio"></div>
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="auth-type-option active" onclick="switchLoginType('email')">
+                        <div class="auth-type-radio"></div>
+                        <span>Email Address</span>
+                    </div>
+                </div>
+
+                <div id="emailLoginFields">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email Address">
+                    </div>
+                    <div class="form-group">
+                        <div class="password-input-wrapper">
+                            <input type="password" class="form-input" id="loginPassword" placeholder="Password(6-16 characters)">
+                            <button class="toggle-password" onclick="togglePassword('loginPassword')">👁</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="phoneLoginFields" style="display: none;">
+                    <div class="form-group">
+                        <div class="phone-input-group">
+                            <select class="country-code">
+                                <option>NG +234</option>
+                            </select>
+                            <input type="tel" class="form-input" placeholder="Your Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="password-input-wrapper">
+                            <input type="password" class="form-input" id="loginPasswordPhone" placeholder="Password(6-16 characters)">
+                            <button class="toggle-password" onclick="togglePassword('loginPasswordPhone')">👁</button>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="forgot-password">Forgot Password?</a>
+
+                <button class="auth-btn">Log in</button>
+
+                <div class="social-divider">- or -</div>
+
+                <div class="social-login">
+                    <button class="social-btn facebook">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </button>
+                    <button class="social-btn twitter">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </button>
+                    <button class="social-btn google">
+                        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="auth-form" id="signupForm">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Your Email Address">
+                </div>
+                <div class="form-group">
+                    <div class="verification-group">
+                        <input type="text" class="form-input" placeholder="Verification Code">
+                        <button class="get-code-btn">Get Code</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    <div class="password-input-wrapper">
+                        <input type="password" class="form-input" id="signupPassword" placeholder="Password(6-16 characters)">
+                        <button class="toggle-password" onclick="togglePassword('signupPassword')">👁</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="password-input-wrapper">
+                        <input type="password" class="form-input" id="confirmPassword" placeholder="Confirm Password">
+                        <button class="toggle-password" onclick="togglePassword('confirmPassword')">👁</button>
+                    </div>
+                </div>
+
+                <div class="gender-selector">
+                    <div class="auth-type-option active" onclick="selectGender('male')">
+                        <div class="auth-type-radio"></div>
+                        <span>Male</span>
+                    </div>
+                    <div class="auth-type-option" onclick="selectGender('female')">
+                        <div class="auth-type-radio"></div>
+                        <span>Female</span>
+                    </div>
+                </div>
+
+                <button class="auth-btn">Sign up</button>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="termsAccept">
+                    <label for="termsAccept">I have read and accept <a href="#">Terms and Conditions</a></label>
+                </div>
+
+                <div class="social-divider">- or -</div>
+
+                <div class="social-login">
+                    <button class="social-btn facebook">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </button>
+                    <button class="social-btn twitter">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </button>
+                    <button class="social-btn google">
+                        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bottom Music Player -->
+    <div class="music-player">
+        <div class="now-playing">
+            <img src="./jug.jpeg" alt="Jugular Jugular" class="current-track-image">
+            <div class="current-track-info">
+                <div class="current-track-title">Channce(Na Ham)</div>
+                <div class="current-track-artist">Seyi Vibez</div>
+                <div class="lyrics-badge">Lyrics</div>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <div class="control-buttons">
+                <button class="control-btn"><img src="./imgi_61_btn_previous_normal-NYUPBD7I.jpeg" alt=""></button>
+                <button class="control-btn play-btn"><img src="./imgi_72_btn_play_normal-T53UQ6I5.jpeg" alt=""></button>
+                <button class="control-btn"><img src="./imgi_63_btn_next_normal-RGSGOLJT.jpeg" alt=""></button>
+            </div>
+            <div class="progress-bar">
+                <span class="time-current">00:00</span>
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="time-total">04:36</span>
+            </div>
+        </div>
+        
+        <div class="player-extras">
+            <button class="extra-btn"><img src="./imgi_64_playMode_loop-DKJZBDLT.jpeg" alt=""></button>
+            <button class="extra-btn"><img src="./imgi_65_btn_download_normal-3E4FGEX5.jpeg" alt=""></button>
+            <button class="extra-btn"><img src="./imgi_66_btn_favorite_normal-G2OGBHK7.jpeg" alt=""></button>
+            <button class="extra-btn"><img src="./imgi_67_btn_share_normal-C5WD5BZW.jpeg" alt=""></button>
+            <button class="extra-btn"><img src="./imgi_68_btn_playlist_normal-5QYURI25.jpeg" alt=""></button>
+            <button class="extra-btn"><img src="./imgi_114_btn_addPlaylist_normal-TDECRTKN.jpeg" alt=""></button>
+        </div>
+    </div>
+
+    
+    <script>
+        // Modal Functions
+        function openAuthModal() {
+            document.getElementById('authModal').classList.add('active');
+        }
+
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('authModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAuthModal();
+            }
+        });
+
+        // Tab Switching
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.auth-tab');
+            const forms = document.querySelectorAll('.auth-form');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            forms.forEach(f => f.classList.remove('active'));
+            
+            if (tab === 'login') {
+                tabs[0].classList.add('active');
+                document.getElementById('loginForm').classList.add('active');
+            } else {
+                tabs[1].classList.add('active');
+                document.getElementById('signupForm').classList.add('active');
+            }
+        }
+
+        // Login Type Switching
+        function switchLoginType(type) {
+            const options = document.querySelectorAll('#loginForm .auth-type-option');
+            options.forEach(opt => opt.classList.remove('active'));
+            
+            if (type === 'email') {
+                options[1].classList.add('active');
+                document.getElementById('emailLoginFields').style.display = 'block';
+                document.getElementById('phoneLoginFields').style.display = 'none';
+            } else {
+                options[0].classList.add('active');
+                document.getElementById('emailLoginFields').style.display = 'none';
+                document.getElementById('phoneLoginFields').style.display = 'block';
+            }
+        }
+
+        // Password Toggle
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        }
+
+        // Gender Selection
+        function selectGender(gender) {
+            const options = document.querySelectorAll('.gender-selector .auth-type-option');
+            options.forEach(opt => opt.classList.remove('active'));
+            
+            if (gender === 'male') {
+                options[0].classList.add('active');
+            } else {
+                options[1].classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
